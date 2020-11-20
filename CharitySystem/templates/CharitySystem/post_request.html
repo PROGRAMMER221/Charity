@@ -1,19 +1,25 @@
 {% extends "CharitySystem/head-foot-page.html" %}
 {% block content %}
 {% load static %}
-<div class="container mt-5 mb-5">
-{% for req in data %}
-  <div class="card" style="width: 18rem;">
-    <img class="card-img-top" src="{% static 'img/charity.jpg' %}" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">{{req.ngo_name}}</h5>
-          <p class="card-text">{{req.donation_description}}</p>
-      </div>
-      <div class="card-body">
-        <a href="/payment/" class="card-link btn btn-outline-info">Donate </a>
-      </div>
+<div class="container mt-5 mb-5 text-center">
+  <div class="row">
+    {% for req in row %}
+
+  <div class="col">
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="{% static 'img/charity.jpg' %}" alt="Card image cap">
+        <div class="card-body">
+          {% for r in req %}
+          <h5 class="card-title">{{r}}</h5>
+          {% endfor %}
+        </div>
+        <!-- <div class="card-body">
+          <a href="/payment/{{req}}" class="card-link btn btn-outline-info">Donate </a>
+        </div> -->
+    </div>
   </div>
 {% endfor %}
+  </div>
 </div>
 
 {% endblock %}

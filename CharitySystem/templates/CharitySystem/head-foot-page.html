@@ -20,18 +20,8 @@
             <a href="/"><img src="{% static 'img/icon.png' %}" alt="icon"></a>
         </div>
         <div class="col-8 titles text-center">
-            <span class="pr-4 border-right border-primary"><i class="fas fa-search"></i> Search</span>
-            <span class="pl-4 border-right border-primary pr-4">
-                <div class="dropdown">
-                    Discover
-                    <div class="dropdown-content">
-                        <a href="/self/">About us</a>
-                        <a href="/fund_request/">Fund Request</a>
-                        <a href="/post_request/">Requests</a>
-                        <a href="/get_verified/">Ngo Verification</a>
-                    </div>
-              </div>
-            </span>
+            <span class="pr-4 border-right border-primary"><a href="/" class="text-decoration-none text-body"><i class="fas fa-home"></i>Home</a></span>
+            
             <span class="pl-4 border-right border-primary pr-4">How it Works</span>
             {% if user.is_authenticated %}
                 {% if user.is_superuser %}
@@ -49,6 +39,8 @@
                 </span>
                 {% endif %}
             {% endif %}
+            <span class="pl-4 border-right border-primary pr-4"><a href="/payment/" class="text-decoration-none text-body">Donate</a></span>
+            <span class="pl-4 border-right border-primary pr-4"><a href="/donation_history/" class="text-decoration-none text-body">Donation History</a></span>
             {% if user.is_authenticated %}
                 <span class="pl-4"><button class="btn btn-outline-info" onclick="location.href='/logout/'">Sign Out</button></span>
             {% else %}
@@ -60,7 +52,7 @@
 
 </div>
 <!-- ------------------------------------------------------------------------------------------------------------------------------------ -->
-    
+
     <!-- BLOCK content -->
     {% block content %}
     {% endblock %}
@@ -73,9 +65,9 @@
             <div class="d-inline mr-2">
                 <span style="font-size:12pt; color:blue;">Follow Us</span> 
                 <span class="follow">
-                    <button class="btn btn-outline-fb"><i class="fab fa-facebook-square fa-2x"></i></button>
-                    <button class="btn btn-outline-insta"><i class="fab fa-instagram-square fa-2x"></i></button>
-                    <button class="btn btn-outline-primary border-0"><i class="fab fa-twitter-square fa-2x"></i></button>
+                    <a href='https://www.facebook.com/%E0%A4%B8%E0%A4%BE%E0%A4%A5%E0%A5%80-%E0%A4%B9%E0%A4%BE%E0%A4%A5-%E0%A4%AC%E0%A4%A2%E0%A4%BC%E0%A4%BE%E0%A4%A8%E0%A4%BE-106474951084553' class="btn btn-outline-fb"><i class="fab fa-facebook-square fa-2x"></i></a>
+                    <a href='https://www.instagram.com/_saathihaathbadhana/' class="btn btn-outline-insta"><i class="fab fa-instagram-square fa-2x"></i></a>
+                    <a href='https://twitter.com/HaathBadhana' class="btn btn-outline-primary border-0"><i class="fab fa-twitter-square fa-2x"></i></a>
                 </span>
             </div>
             <div class="d-inline float-right">

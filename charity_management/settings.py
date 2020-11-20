@@ -72,6 +72,7 @@ TEMPLATES = [
         },
     },
 ]
+AUTH_USER_MODEL = 'user.User'
 
 WSGI_APPLICATION = 'charity_management.wsgi.application'
 
@@ -81,15 +82,8 @@ WSGI_APPLICATION = 'charity_management.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'sql_server.pyodbc',
-        'NAME': 'onlinecharity',
-        'HOST': 'DESKTOP-5GH3T49',
-        'USER': 'sa',
-        'PASSWORD': 'tstsql#1234',
-        'OPTIONS': {
-            'driver': 'ODBC Driver 17 for SQL Server',
-        }
-
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'CharityDB'),
     }
 }
 
@@ -118,13 +112,13 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Kolkata'
 
 USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)

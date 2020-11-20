@@ -16,8 +16,9 @@
         </tr>
     </thead>
     <tbody>
+        {% for val in ngo %}
         <tr>
-            {% for val in ngo %}
+            
             <td>{{ val.ngo_name }}</td>
             <td>{{ val.domain }}</td>
             <td>{{ val.head_of_ngo }}</td>
@@ -35,10 +36,10 @@
                 {% elif val.verification_status is False %}
                     <button class="btn btn-outline-danger"><i class="fas fa-times-circle"></i></button>
                 {% endif %}
-            {% endfor %}
             </td>
             
         </tr>
+        {% endfor %}
     </tbody>
 </table>
 

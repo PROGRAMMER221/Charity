@@ -4,7 +4,7 @@ from .models import NGO, donation_request
 class NGO_form(forms.ModelForm):
     class Meta:
         model = NGO
-        fields = ('ngo_name','domain','head_of_ngo','contactNo','email','registration_cerificate_Trust_Society','certificate_12A','beneficiary_profiles')
+        fields = ('ngo_name','domain','head_of_ngo','contactNo','email','address1','address2','state','country','registration_cerificate_Trust_Society','certificate_12A','beneficiary_profiles')
 
 class donation_form(forms.ModelForm):
     class Meta:

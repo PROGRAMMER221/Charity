@@ -1,0 +1,32 @@
+{% extends "CharitySystem/head-foot-page.html" %}
+{% block content %}
+
+<div class="container mt-5 mb-5">
+    <h1 class="text-success text-center">Donation History</h1>
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            {% if request.user.is_superuser %}
+            <th scope="col">Donated To</th>
+            {% endif %}
+            <th scope="col">Donated To</th>
+            <th scope="col">When</th>
+            <th scope="col">Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for his in don_his %}
+          <tr>
+            {% if request.user.is_superuser %}
+            <td>{{his.donar_name}}</td>
+            {% endif %}
+            <td>{{his.donatedTO}}</td>
+            <td>{{his.when}}</td>
+            <td>{{his.amount}}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+</div>
+
+{% endblock %}
