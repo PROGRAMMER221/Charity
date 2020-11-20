@@ -134,7 +134,7 @@ MEDIA_URL = '/media/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'CharitySystem/media')
 
-LOGIN_REDIRECT_URL = 'http://127.0.0.1:8000/'
+LOGIN_REDIRECT_URL = '/'
 
 EMAIL_HOST = 'smtp-mail.outlook.com'
 EMAIL_PORT = 587
