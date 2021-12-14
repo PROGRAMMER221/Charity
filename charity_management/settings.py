@@ -139,5 +139,5 @@ LOGIN_REDIRECT_URL = '/'
 EMAIL_HOST = 'smtp-mail.outlook.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'aman_22@outlook.com'
-EMAIL_HOST_PASSWORD = 'systech360'
+EMAIL_HOST_PASSWORD = '**********'
 EMAIL_USE_TLS = True
